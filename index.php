@@ -31,28 +31,28 @@ session_start();
             font-family: "Verdana";
             font-weight: bold;
             background-color: transparent;
-            color: #1B2A4A;
+            color: #482c3d;
         }
 
         .col.mx-2.shadow.p-5 {
-            border-top: 5px solid #1B2A4A;
+            border-top: 5px solid #bd8e89;
             border-radius: 10px;
         }
 
         label {
-            color: #1B2A4A;
+            color: #7f6269;
             font-weight: 600;
             font-size: 0.88rem;
         }
 
         .form-control:focus {
-            border-color: #17A2B8;
+            border-color: #482c3d;
             box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.2);
         }
 
         input[type="radio"],
         input[type="checkbox"] {
-            accent-color: #1B2A4A;
+            accent-color: #482c3d;
         }
 
         hr {
@@ -61,14 +61,14 @@ session_start();
 
         .btn-outline-info {
             color: #ffffff;
-            background-color: #1B2A4A;
-            border-color: #1B2A4A;
+            background-color: #482c3d;
+            border-color: #482c3d;
             font-weight: 600;
         }
 
         .btn-outline-info:hover {
-            background-color: #17A2B8;
-            border-color: #17A2B8;
+            background-color: #bd8e89;
+            border-color: #482c3d;
             color: #ffffff;
         }
 
@@ -89,7 +89,7 @@ session_start();
                             <input type="text" name="name" id="name" class="form-control" required/><br>
 
                             <label for="age" for="age">Age: </label>
-                            <input type="number" age="age" id="age" class="form-control" min="1" max="120" required/><br>
+                            <input type="number" name="age" id="age" class="form-control" min="1" max="120" required/><br>
 
                             <label class="course" for="course">Course/Program: </label>
                             <input type="text" name="course" id="course" class="form-control" required/><br>
@@ -117,28 +117,28 @@ session_start();
 
                                 <div class="col-6">
                                     <label for="hobby">Hobbies:</label><br>
-                                    <input type="checkbox" name="hobby1" id="hobby1" value="music">
+                                    <input type="checkbox" name="hobbies[]" id="hobby1" value="Listening to Music">
                                     <label for="hobby1">Listening to Music</label><br>
 
-                                    <input type="checkbox" name="hobby2" id="hobby2" value="reading">
+                                    <input type="checkbox" name="hobbies[]" id="hobby2" value="Reading Books">
                                     <label for="hobby2">Reading Books</label><br>
 
-                                    <input type="checkbox" name="hobby3" id="hobby3" value="games">
+                                    <input type="checkbox" name="hobbies[]" id="hobby3" value="Playing online games">
                                     <label for="hobby3">Playing online games</label><br>
 
-                                    <input type="checkbox" name="hobby4" id="hobby4" value="movies">
+                                    <input type="checkbox" name="hobbies[]" id="hobby4" value="Watching Movies">
                                     <label for="hobby4">Watching Movies</label><br>
 
-                                    <input type="checkbox" name="hobby5" id="hobby5" value="drawing">
+                                    <input type="checkbox" name="hobbies[]" id="hobby5" value="Drawing / Painting">
                                     <label for="hobby5">Drawing / Painting</label><br>
 
-                                    <input type="checkbox" name="hobby6" id="hobby5" value="sports">
+                                    <input type="checkbox" name="hobbies[]" id="hobby6" value="Sports">
                                     <label for="hobby6">Sports</label><br>
                                 </div>
                             </div>
 
                             <div class="form-floating">
-                                <textarea class="form-control mt-4 mb-4" placeholder="Short Biography" id="bio" style="height: 110px;"></textarea>
+                                <textarea class="form-control mt-4 mb-4" name="bio" placeholder="Short Biography" id="bio" style="height: 110px;"></textarea>
                                 <label for="bio">Please enter a short biography.</label>
                             </div>
 
