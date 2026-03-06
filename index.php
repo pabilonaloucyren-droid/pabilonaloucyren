@@ -18,15 +18,58 @@ session_start();
 
         .container{
             width: 550px;
-            background-color: white;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
         }
+
         body{
-            background-color: #F4F6F9;
+            background-color: #E8F0F7;
         }
+
         h2{
             font-family: "Verdana";
             font-weight: bold;
-            background-color: #F4F6F9;
+            background-color: transparent;
+            color: #1B2A4A;
+        }
+
+        .col.mx-2.shadow.p-5 {
+            border-top: 5px solid #1B2A4A;
+            border-radius: 10px;
+        }
+
+        label {
+            color: #1B2A4A;
+            font-weight: 600;
+            font-size: 0.88rem;
+        }
+
+        .form-control:focus {
+            border-color: #17A2B8;
+            box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.2);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #1B2A4A;
+        }
+
+        hr {
+            border-color: #b8d4e8;
+        }
+
+        .btn-outline-info {
+            color: #ffffff;
+            background-color: #1B2A4A;
+            border-color: #1B2A4A;
+            font-weight: 600;
+        }
+
+        .btn-outline-info:hover {
+            background-color: #17A2B8;
+            border-color: #17A2B8;
+            color: #ffffff;
         }
 
     </style>
