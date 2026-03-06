@@ -1,4 +1,4 @@
-<php?
+<?php
 session_start();
 ?>
 
@@ -17,9 +17,16 @@ session_start();
     <style>
 
         .container{
+            width: 550px;
+            background-color: white;
         }
-        check{
-            
+        body{
+            background-color: #F4F6F9;
+        }
+        h2{
+            font-family: "Verdana";
+            font-weight: bold;
+            background-color: #F4F6F9;
         }
 
     </style>
@@ -27,59 +34,88 @@ session_start();
 
 <body>
 
-<div class = "container" >
-    <div class="row my-4">
-        <!-- Profile Generator -->
-        <div class="col  mx-2 shadow p-3">
-                <h1 class="text-center" >Profile Form Page</h1>
-                <form action="profile.php" method="post" target="_blank" enctype="multipart/formdata">
-                <div class = "row">
-                    <div class = "col">
-                        <div class = "mb-3">
-                            <label class = "form-label">Full Name: </label>
-                            <input type = "text" name = "fullname" class="form-control" required>
-                        </div>
-                        <div class = "mb-3">
-                            <label class = "form-label">Age: </label>
-                            <input type = "number" name = "age" class="form-control" min="1" max="120" required>
-                        </div>
-                        <div class = "mb-3">
-                            <label class = "form-label">Course/Program: </label>
-                            <input type = "text" name = "course" class="form-control" required>
-                        </div>
-                        <div class = "mb-3">
-                            <label class = "form-label">Email Address: </label>
-                            <input type = "email" name = "email" class="form-control" required>
-                        </div>
-                        <div class = "mb-3">
-                            <label class = "form-label">Gender: </label><br>
-                                <div class="check mx-2">
-                                    <input type = "radio" name = "gender" value ="Male"> Male
-                                    <input type = "radio" name = "gender" value ="Female"> Female
+<body>
+    <div class="container">
+        <div class="row my-4">
+            <div class="col  mx-2 shadow p-5">
+                <h2 class="text-center mb-4">Profile Form Page</h2><hr>
+                <form action="profile.php" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col">
+                            <label class="fullname" for="name">Full Name: </label>
+                            <input type="text" name="name" id="name" class="form-control" required/><br>
+
+                            <label for="age" for="age">Age: </label>
+                            <input type="number" age="age" id="age" class="form-control" min="1" max="120" required/><br>
+
+                            <label class="course" for="course">Course/Program: </label>
+                            <input type="text" name="course" id="course" class="form-control" required/><br>
+
+                            <label class="emailAddress" for="emailAddress">Email Address: </label>
+                            <input type="emailAddress" name="emailAddress" id="emailAddress" class="form-control"><br>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="">Select Gender:</label>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="gender" id="gender"
+                                            value="Male" required/><label for="gender" class="form-check-label">Male</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="gender" id="gender"
+                                            value="Female"><label for="gender" class="form-check-label">Female</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="gender" id="gender"
+                                            value="None"><label for="gender" class="form-check-label">Prefer not to say</label>
+                                    </div>
                                 </div>
-                        </div>
-                        <div class = "mb-3">
-                            <label class = "form-label">Hobbies: </label><br>
-                            <input type="checkbox" name="hobby1" value="Reading Comics">Reading Comics
-                            <input type="checkbox" name="hobby2" value="Online Shopping">Online shopping
-                            <input type="checkbox" name="hobby3" value="Playing Online Games">Playing Online Games
-                            <input type="checkbox" name="hobby4" value="">Reading
-                            <input type="checkbox" name="hobby5" value="">Reading
-                        </div>
 
 
+                                <div class="col-6">
+                                    <label for="hobby">Hobbies:</label><br>
+                                    <input type="checkbox" name="hobby1" id="hobby1" value="music">
+                                    <label for="hobby1">Listening to Music</label><br>
 
-                    </div>
-                </div>
+                                    <input type="checkbox" name="hobby2" id="hobby2" value="reading">
+                                    <label for="hobby2">Reading Books</label><br>
 
+                                    <input type="checkbox" name="hobby3" id="hobby3" value="games">
+                                    <label for="hobby3">Playing online games</label><br>
 
+                                    <input type="checkbox" name="hobby4" id="hobby4" value="movies">
+                                    <label for="hobby4">Watching Movies</label><br>
 
+                                    <input type="checkbox" name="hobby5" id="hobby5" value="drawing">
+                                    <label for="hobby5">Drawing / Painting</label><br>
+
+                                    <input type="checkbox" name="hobby6" id="hobby5" value="sports">
+                                    <label for="hobby6">Sports</label><br>
+                                </div>
+                            </div>
+
+                            <div class="form-floating">
+                                <textarea class="form-control mt-4 mb-4" placeholder="Short Biography" id="bio" style="height: 110px;"></textarea>
+                                <label for="bio">Please enter a short biography.</label>
+                            </div>
+
+                            <div class="">
+                                <label for="fileInput" class="form-label">Upload Profile Image</label>
+                                <input class="form-control" type="file" name="profileImage" id="fileInput" accept="image/*" required>
+                            </div>
+
+                            <div class="d-grid mt-3">
+                                <button type="submit" class="btn btn-outline-info">Submit</button>
+                            </div>
 
                 </form>
-        </div>
 
+            </div>
+        </div>
+        </form>
     </div>
-</div>
+
+</body>
     
 </body>
 </html>
